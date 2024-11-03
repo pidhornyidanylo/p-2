@@ -1,0 +1,5 @@
+.logoName {
+  font-size: 1.5em;
+  font-family: var(--heading-font);
+  color: var(--main-dark-blue);
+}

@@ -1,0 +1,73 @@
+.rectangle-container {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 50px;
+}
+
+.rectangle {
+  margin-top: 50px;
+  background-color: #000080;
+  width: 1200px;
+  height: 62px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: translateX(-10%);
+}
+
+.rectangle::after {
+  content: '';
+  position: absolute;
+  right: -28px;
+  top: 0;
+  width: 28px;
+  height: 70px;
+  transform: skew(-30deg) rotate(-30deg) translate(2px, -12.9px);
+  background-color: transparent;
+  border: 1px solid var(--main-dark-blue);
+  border-left: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.rectangle::before {
+  content: '';
+  position: absolute;
+  right: 581px;
+  top: -259px;
+  width: 26px;
+  height: 500px;
+  transform: rotate(-24deg) skew(66deg) translate(1.1px, -0.2px);
+  background-color: transparent;
+  border-right: 2px solid var(--main-dark-blue);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 1200px) {
+  .rectangle {
+    width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .rectangle {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rectangle {
+    width: 576px;
+  }
+}
+
+@media (max-width: 576px) {
+  .rectangle {
+    width: 425px;
+  }
+}
+
+@media (max-width: 425px) {
+  .rectangle {
+    width: 375px;
+  }
+}

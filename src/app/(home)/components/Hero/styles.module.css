@@ -1,0 +1,181 @@
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rectanledBackground {
+  display: none;
+}
+
+.leftAngledBorderContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.leftAngledYLine {
+  position: absolute;
+  top: -20;
+  left: 20px;
+  opacity: 0;
+  background-color: black;
+  width: 8px;
+  height: 500px;
+  z-index: 5;
+}
+
+.leftAngledXLine {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  left: 0;
+  background-color: black;
+  width: 500px;
+  height: 8px;
+}
+
+.rightAngledBorderContainer {
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.rightAngledYLine {
+  position: absolute;
+  top: -50px;
+  left: 0px;
+  opacity: 0;
+  background-color: black;
+  width: 8px;
+  height: 500px;
+  z-index: 5;
+}
+
+.rightAngledXLine {
+  position: absolute;
+  top: -30px;
+  opacity: 0;
+  left: -20px;
+  background-color: black;
+  width: 500px;
+  height: 8px;
+}
+
+.heroContent h2 {
+  height: 350px;
+  font-family: var(--heading-font);
+  color: var(--main-dark-blue);
+  font-size: 5.5em;
+  line-height: normal;
+  text-align: center;
+}
+
+.heroContent p {
+  max-width: 650px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.leftRectangleContainer {
+  overflow: hidden;
+  bottom: 100px;
+  position: absolute;
+}
+
+.rightRectangleContainer {
+  overflow: hidden;
+  top: 150px;
+  position: absolute;
+  right: 0;
+  transform: translateX(300px);
+  transform: scale(1);
+}
+
+.rightRectangleContainer > * {
+  transform: scaleX(-1) scaleY(1);
+}
+
+@media (max-width: 1200px) {
+  .heroContent h2 {
+    height: 320px;
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroContent h2 {
+    height: 280px;
+    font-size: 4em;
+  }
+
+  .leftRectangleContainer {
+    bottom: 50px;
+  }
+
+  .rightRectangleContainer {
+    top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftRectangleContainer {
+    display: none;
+  }
+
+  .rightRectangleContainer {
+    display: none;
+  }
+
+  .leftAngledBorderContainer {
+    display: none;
+  }
+
+  .rightAngledBorderContainer {
+    display: none;
+  }
+
+  .rectanledBackground {
+    display: block;
+  }
+
+  .recBgOne {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.55;
+    transform: rotate(8deg) scale(1.25);
+    top: 80%;
+    left: -150%;
+  }
+  .recBgTwo {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.45;
+    transform: rotate(-8deg);
+    top: 15%;
+    left: -100%;
+  }
+  .recBgThree {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    transform: scaleX(-1) scaleY(1) rotate(4deg) scale(0.75);
+    top: 35%;
+    left: 140%;
+  }
+  .recBgFour {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.15;
+    transform: scaleX(-1) scaleY(1) rotate(-4deg) scale(0.75);
+    top: 65%;
+    left: 260%;
+  }
+}
