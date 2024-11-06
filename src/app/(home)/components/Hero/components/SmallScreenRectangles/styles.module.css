@@ -45,7 +45,4 @@
 }
 
 @media (max-width: 576px) {
-  .rectanglesContainer {
-    display: none;
-  }
 }

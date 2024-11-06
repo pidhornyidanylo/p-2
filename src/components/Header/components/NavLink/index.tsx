@@ -7,14 +7,19 @@ import { usePathname } from 'next/navigation';
 type NavLinkProps = {
   path: string;
   href: string;
+  type: 'normal' | 'burger';
 };
 
-const NavLink: React.FC<NavLinkProps> = ({ path, href }: NavLinkProps) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  path,
+  href,
+  type,
+}: NavLinkProps) => {
   const pathname = usePathname();
   const isCurrentPathname = pathname === href;
   return (
     <Link
-      className={`${styles.link}${isCurrentPathname ? ' ' + styles.active : ''}`}
+      className={`${styles.link}${type === 'burger' ? ' ' + styles.burger : ''}${isCurrentPathname ? ' ' + styles.active : ''}`}
       href={href}
     >
       {path}

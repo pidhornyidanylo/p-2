@@ -40,15 +40,34 @@ const Navigation = () => {
   return (
     <nav className={styles.navContainer}>
       {showBurger ? (
-        <Burger
-          showBurgerMenu={showBurgerMenu}
-          setShowBurgerMenu={setShowBurgerMenu}
-        />
+        <>
+          <Burger
+            showBurgerMenu={showBurgerMenu}
+            setShowBurgerMenu={setShowBurgerMenu}
+          />
+          {showBurgerMenu && (
+            <ul className={styles.navListAbs}>
+              {navigationData.map((navigationItem) => (
+                <li key={navigationItem.path}>
+                  <NavLink
+                    type='burger'
+                    path={navigationItem.path}
+                    href={navigationItem.href}
+                  />
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
       ) : (
         <ul className={styles.navList}>
           {navigationData.map((navigationItem) => (
             <li key={navigationItem.path}>
-              <NavLink path={navigationItem.path} href={navigationItem.href} />
+              <NavLink
+                type='normal'
+                path={navigationItem.path}
+                href={navigationItem.href}
+              />
             </li>
           ))}
         </ul>

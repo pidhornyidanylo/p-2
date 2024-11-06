@@ -3,3 +3,9 @@
   font-family: var(--heading-font);
   color: var(--main-dark-blue);
 }
+
+@media (max-width: 576px) {
+  .logoName {
+    font-size: 1.2em;
+  }
+}

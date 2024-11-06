@@ -16,7 +16,7 @@ const SmallScreenRectangleContainer = () => {
   useEffect(() => {
     const matchMedia = gsap.matchMedia();
 
-    const tabletContext = matchMedia.add('(max-width: 767px)', () => {
+    const tabletContext = matchMedia.add('(max-width: 768px)', () => {
       const ctx = gsap.context(() => {
         gsap.to(topLeftRectangle.current, {
           left: '0',
