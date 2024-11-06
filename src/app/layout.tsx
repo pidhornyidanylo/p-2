@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Cormorant } from 'next/font/google';
+import { Header } from '@/components';
 import './globals.css';
-import Header from '@/components/Header';
 
 export const playfair = Playfair_Display({
   subsets: ['latin'],

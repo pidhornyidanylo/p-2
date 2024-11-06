@@ -1,0 +1,16 @@
+.leftRectangleContainer {
+  bottom: 200px;
+  position: absolute;
+}
+
+@media (max-width: 992px) {
+  .leftRectangleContainer {
+    bottom: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leftRectangleContainer {
+    display: none;
+  }
+}

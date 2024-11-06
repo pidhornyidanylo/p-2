@@ -1,0 +1,23 @@
+.rightRectangleContainer {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: translateX(300px);
+  transform: scale(1);
+}
+
+.rightRectangleContainer > * {
+  transform: scaleX(-1) scaleY(1);
+}
+
+@media (max-width: 992px) {
+  .rightRectangleContainer {
+    top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rightRectangleContainer {
+    display: none;
+  }
+}

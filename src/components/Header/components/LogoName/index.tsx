@@ -7,17 +7,15 @@ const LogoName = () => {
   const logoName = useRef<HTMLHeadingElement | null>(null);
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(logoName.current, {
+      gsap.to(logoName.current, {
         duration: 1,
-        text: '',
+        text: 'Danylo Pidhornyi',
       });
     });
     return () => ctx.revert();
   }, []);
   return (
-    <h3 ref={logoName} className={styles.logoName}>
-      Danylo Pidhornyi
-    </h3>
+    <h3 ref={logoName} data-testid='logo' className={styles.logoName}></h3>
   );
 };
 

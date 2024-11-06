@@ -1,0 +1,51 @@
+.rectanglesContainer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rectanglesContainer {
+    display: block;
+  }
+
+  .topLeftRectangle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.45;
+    transform: rotate(-8deg);
+    top: 5%;
+    left: -200%;
+  }
+
+  .bottomLeftRectangle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.55;
+    transform: rotate(8deg) scale(1.25);
+    top: 70%;
+    left: -150%;
+  }
+
+  .topRightRectangle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.25;
+    transform: scaleX(-1) scaleY(1) rotate(4deg) scale(0.75);
+    top: 25%;
+    left: 140%;
+  }
+
+  .bottomRightRectangle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.15;
+    transform: scaleX(-1) scaleY(1) rotate(350deg) scale(0.75);
+    top: 55%;
+    left: 260%;
+  }
+}
+
+@media (max-width: 576px) {
+  .rectanglesContainer {
+    display: none;
+  }
+}

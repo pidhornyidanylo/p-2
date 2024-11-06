@@ -10,19 +10,19 @@ jest.mock('gsap', () => {
       callback();
       return { revert: jest.fn() };
     }),
-    from: jest.fn((target) => {
+    to: jest.fn((target) => {
       return target;
     }),
     registerPlugin: jest.fn(),
   };
 });
 
+jest.mock('gsap/TextPlugin', () => jest.fn());
+
 describe('LogoName component', () => {
   it('renders properly', () => {
     render(<LogoName />);
-    const heading = screen.getByRole('heading', {
-      name: /danylo pidhornyi/i,
-    });
+    const heading = screen.getByTestId('logo');
     expect(heading).toBeInTheDocument();
   });
 });
